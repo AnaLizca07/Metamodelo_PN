@@ -135,7 +135,7 @@ public class EquipoImpl extends MinimalEObjectImpl.Container implements Equipo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EquipoImpl() {
+	public EquipoImpl() {
 		super();
 	}
 

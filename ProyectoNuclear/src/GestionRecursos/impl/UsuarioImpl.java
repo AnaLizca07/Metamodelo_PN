@@ -156,7 +156,7 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected UsuarioImpl() {
+	public UsuarioImpl() {
 		super();
 	}
 
