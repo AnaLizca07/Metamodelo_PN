@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ProyectoNuclear/src" modelPluginID="ProyectoNuclear"
+    modelName="GestionRecursos" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="22.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>GestionRecursos.ecore</foreignModel>
+  <genPackages prefix="GestionRecursos" disposableProviderFactory="true" ecorePackage="GestionRecursos.ecore#/">
+    <genClasses ecoreClass="GestionRecursos.ecore#//Usuario">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Usuario/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Usuario/tipoDocumento"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Usuario/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Usuario/correoInstitucional"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Usuario/telefono"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Usuario/rol"/>
+    </genClasses>
+    <genClasses ecoreClass="GestionRecursos.ecore#//Equipo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Equipo/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Equipo/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Equipo/marca"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Equipo/sede"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Equipo/estado"/>
+    </genClasses>
+    <genClasses ecoreClass="GestionRecursos.ecore#//GestorInventario">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//GestorInventario/nivelAcceso"/>
+    </genClasses>
+    <genClasses ecoreClass="GestionRecursos.ecore#//Prestamo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Prestamo/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Prestamo/fechaPrestamo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Prestamo/fechaDevolucion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Prestamo/estado"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GestionRecursos.ecore#//Prestamo/acta"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Prestamo/observaciones"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GestionRecursos.ecore#//Prestamo/reserva"/>
+    </genClasses>
+    <genClasses ecoreClass="GestionRecursos.ecore#//Reserva">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Reserva/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Reserva/fechaSolicitud"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Reserva/fechaReserva"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GestionRecursos.ecore#//Reserva/equipo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GestionRecursos.ecore#//Reserva/usuario"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Reserva/estado"/>
+    </genClasses>
+    <genClasses ecoreClass="GestionRecursos.ecore#//Notificaciones">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Notificaciones/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Notificaciones/tipo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Notificaciones/copias"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Notificaciones/estado"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Notificaciones/prioridad"/>
+    </genClasses>
+    <genClasses ecoreClass="GestionRecursos.ecore#//GestorUsuarios"/>
+    <genClasses ecoreClass="GestionRecursos.ecore#//GestorPrestamos">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GestionRecursos.ecore#//GestorPrestamos/notificaciones"/>
+    </genClasses>
+    <genClasses ecoreClass="GestionRecursos.ecore#//Inventario">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Inventario/reporte"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GestionRecursos.ecore#//Inventario/EquiposTecnologicos"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GestionRecursos.ecore#//Inventario/administrador"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Inventario/estadoElementos"/>
+    </genClasses>
+    <genClasses ecoreClass="GestionRecursos.ecore#//Actas">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Actas/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Actas/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Actas/tipo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GestionRecursos.ecore#//Actas/formatoArchivo"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
